@@ -17,7 +17,9 @@
             <div class="right">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="Skill.html">Skill</a></li>
                     <li><a href="project.html">Project</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -28,21 +30,45 @@
 
     <main>
 
-        <p class="about-title2">About Me</p>
-        <p class="para">I am <span style="color:rgb(206, 68, 206)">Al Abid Rahman</span>, currently I am a student of Software Engineering Department 
-            <br>at Shahjalal University of Science & Technology. I am a Web Development enthusiast.
-        <br><span style="color:aquamarine">Backend Development</span> along with <span style="color:aquamarine">Database Management</span> is my peak interest. However,
-        <br>I am also keen to learn the process of <span style="color:skyblue">Frontend Development</span> to an intermediate extent.
-        <br>Considering this, I am learning the basics of <span style="color:cyan">Html</span>, <span style="color:cyan">CSS</span> & <span style="color:cyan">JavaScript</span>. 
-        This very website <br>is developed with Html & CSS to strengthen my knowledge of web-based application 
-        <br>development. I am very much eager to see myself become an all-round web developer.
-        <br>Now about my personal details, I am 23 years old as of 2026. I attended Bangladesh 
-        <br>Navy School & College and Govt. MM. City College for SSC and HSC respectively.
-        <br>I secured GPA-5 on both the occasion. My hometown is Khulna. Some of my non-
-        <br>academic achievements include attending Extension Camp, BDJSO 2019, attending 
-        <br>National Round at BDMO 2022 & becoming 15th in Bangladesh Science Olympiad 2020. </p>
+        <p class="about-title2"><span style="color:moccasin">About Me</span></p>
+
+        <div class="about-box">
+
+            <p class="para" style="margin-top:25px; margin-left:40px;">
+                I am <span style="color:rgb(206, 68, 206)">Al Abid Rahman</span>, currently I am a student of Software Engineering Department 
+                <br>at Shahjalal University of Science & Technology. I am a Web Development enthusiast.
+                <br><span style="color:aquamarine">Backend Development</span> along with <span style="color:aquamarine">Database Management</span> is my peak interest. However,
+                <br>I am also keen to learn the process of <span style="color:skyblue">Frontend Development</span> to an intermediate extent.
+                <br>Considering this, I am learning the basics of <span style="color:cyan">Html</span>, <span style="color:cyan">CSS</span> & <span style="color:cyan">JavaScript</span>. 
+                This very website <br>is developed with Html & CSS to strengthen my knowledge of web-based application 
+                <br>development. I am very much eager to see myself become an all-round web developer.
+                <br>Now about my personal details, I am 23 years old as of 2026. I attended Bangladesh 
+                <br>Navy School & College and Govt. MM. City College for SSC and HSC respectively.
+                <br>I secured GPA-5 on both the occasion. My hometown is Khulna. Some of my non-
+                <br>academic achievements include attending Extension Camp, BDJSO 2019, attending 
+                <br>National Round at BDMO 2022 & becoming 15th in Bangladesh Science Olympiad 2020.
+            </p>
+
+        </div>
 
     </main>
+
+    <script>
+const navLinks = document.querySelectorAll("nav ul li a");
+
+navLinks.forEach(link => {
+
+  const linkPage = link.getAttribute("href");
+
+  
+  const currentPage = window.location.pathname.split("/").pop();
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+
+});
+</script>
 
 </body>
 </html>
